@@ -1,0 +1,16 @@
+{
+  "buttons": {
+    "title": "파일 속성"
+  },
+  "dialog": {
+    "fileName": "파일 이름:",
+    "title": "제목:",
+    "subject": "주제:",
+    "keywords": "키워드:",
+    "author": "작성자:",
+    "producer": "생산자:",
+    "creator": "생성 프로그램:",
+    "createdDate": "작성일:",
+    "modifiedDate": "수정일:"
+  }
+}

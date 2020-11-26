@@ -1,0 +1,24 @@
+{
+  "buttons": {
+    "title": "블랙마킹",
+    "redact_text": "블랙마킹할 텍스트 표시",
+    "redact_area": "블랙마킹할 영역 표시",
+    "redact_page": "블랙마킹할 페이지 표시",
+    "redact_search": "텍스트 찾기",
+    "apply": "적용",
+    "ok": "확인",
+    "cancel": "취소"
+  },
+  "tooltips": {
+    "redaction": "블랙마킹할 내용 표시",
+    "apply": "표시된 모든 내용을 제거하기 위해 적용"
+  },
+  "dialog": {
+    "apply_alert": "이 작업은 블랙마킹된 내용을 영구적으로 제거하며 취소할 수 없습니다.",
+    "redaction_page": {
+      "mark_current_page": "블랙마킹을 위해 현재 페이지 표시",
+      "mark_specific_page": "블랙마킹할 특정 페이지 범위 표시",
+      "page_range": "페이지 범위"
+    }
+  }
+}

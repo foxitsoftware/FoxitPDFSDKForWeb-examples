@@ -1,0 +1,16 @@
+{
+    "library": "Thumbnail",
+    "i18n": {
+
+        "ns": "thumbnail",
+        "sources": {
+            "zh-CN": "./locales/zh-CN.json",
+            "en-US": "./locales/en-US.json",
+            "ko-KR": "./locales/ko-KR.json",
+            "ja-JP": "./locales/ja-JP.json"
+        }
+    },
+    "css": [
+        "./index.css"
+    ]
+}

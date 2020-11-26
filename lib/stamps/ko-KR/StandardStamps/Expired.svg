@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 30" style="enable-background:new 0 0 100 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2E6DAD;}
+	.st1{clip-path:url(#SVGID_2_);fill:none;stroke:#FFFFFF;stroke-width:1.2;}
+	.st2{clip-path:url(#SVGID_4_);fill:#FFFFFF;}
+	.st3{enable-background:new    ;}
+	.st4{fill:#FFFFFF;}
+</style>
+<rect class="st0" width="100" height="30"/>
+<rect x="2.5" y="2.7" class="st0" width="95" height="25"/>
+<g>
+	<g>
+		<g>
+			<defs>
+				<rect id="SVGID_1_" width="100" height="30"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<rect x="2.5" y="2.7" class="st1" width="95" height="25"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<defs>
+				<rect id="SVGID_3_" width="100" height="30"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<path class="st2" d="M21.6,7.1c-4.4,0-7.9,3.6-7.9,7.9c0,4.4,3.6,7.9,7.9,7.9c4.4,0,7.9-3.6,7.9-7.9S25.9,7.1,21.6,7.1 M22,22.3
+				v-1.6c0-0.2-0.2-0.4-0.4-0.4c-0.2,0-0.4,0.2-0.4,0.4v1.6c-3.7-0.2-6.7-3.2-6.9-6.9c0.1,0,0.1,0.1,0.2,0.1h1.6
+				c0.2,0,0.4-0.2,0.4-0.4s-0.2-0.4-0.4-0.4h-1.6c-0.1,0-0.1,0-0.2,0.1c0.2-3.7,3.1-6.7,6.7-7c0,0,0,0,0,0.1v1.6
+				c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4V7.8V7.7c3.8,0.1,6.9,3.1,7.1,6.9h-0.1h-1.6c-0.2,0-0.4,0.2-0.4,0.4s0.2,0.4,0.4,0.4h1.6
+				h0.1c0,0.5-0.1,1.1-0.3,1.6L22,15.4l3.2-3.4l-0.6-0.6L21.2,15l0,0l-1.8,0.9l0.4,0.8l1.8-0.9l-0.3-0.5l0.4,0.4l0.1-0.2l6.7,1.7
+				C27.7,20,25.1,22.2,22,22.3"/>
+		</g>
+	</g>
+</g>
+<g class="st3">
+	<path class="st4" d="M51.2,15.8h-4.9v-5h4.9V15.8z M50.2,11.6h-3V15h3V11.6z M48.4,19.5h6.2v0.8h-7.2V17h1V19.5z M55.7,13.1v0.8
+		h-1.6v3.8h-1V9.8h1v3.3H55.7z"/>
+	<path class="st4" d="M66.6,18.5v0.8h-9.8v-0.8h2.7v-2H58v-3.3h6.4v-1.7H58v-0.8h7.4v3.3H59v1.7h6.6v0.8H64v2H66.6z M60.5,18.5H63
+		v-2h-2.5V18.5z"/>
+</g>
+</svg>

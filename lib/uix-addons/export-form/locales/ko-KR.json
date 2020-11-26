@@ -1,0 +1,10 @@
+{
+  "button-tooltip": {
+    "title": "내보내기 양식"
+  },
+  "export": {
+    "xml": "XML 파일로",
+    "fdf": "FDF 파일로",
+    "xfdf": "XFDF 파일로"
+  }
+}

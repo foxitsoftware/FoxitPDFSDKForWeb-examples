@@ -1,0 +1,37 @@
+{
+    "name": "foxit-pdf-sdk-for-web",
+    "version": "7.5.0",
+    "description": "Foxit pdf sdk for web.",
+    "author": "Foxit Software Inc.",
+    "main": "./lib/UIExtension.full.js",
+    "types": "./lib/UIExtension.d.ts",
+    "scripts": {
+        "start": "concurrently --kill-others \"npm run start-http-server\" \"npm run start-snapshot-server\"",
+        "start-snapshot-server": "node ./server/snapshot/src/index -p 3002",
+        "start-http-server": "node ./server/index"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "boxen": "^4.1.0",
+        "chalk": "^2.4.1",
+        "concurrently": "^4.1.0",
+        "http-proxy-middleware": "^0.19.1",
+        "koa": "^2.7.0",
+        "koa-body": "^4.0.4",
+        "koa-body-parser": "^1.1.2",
+        "koa-router": "^7.4.0",
+        "koa2-connect": "^1.0.2",
+        "lru-cache": "^4.1.3",
+        "raw-body": "^2.3.3",
+        "require-dir": "^1.0.0",
+        "serve-handler": "^6.0.2"
+    },
+    "serve": {
+        "port": 8080,
+        "public": "/",
+        "proxy": {
+            "target": "http://127.0.0.1:3002",
+            "changeOrigin": true
+        }
+    }
+}

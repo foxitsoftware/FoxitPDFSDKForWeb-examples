@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- default(white), black, black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Foxit PDF SDK for Web">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=no,transition=no">
+    <meta name="format-detaction" content="telephone=no,email=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="750">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="renderer" content="webkit">
+
+    <title>Foxit PDF SDK for Web</title>
+    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../../lib/UIExtension.css">
+    <style>
+        body {
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+        }
+
+        #pdf-ui {
+            top: 20px;
+            bottom: 0;
+            position: absolute;
+            width: 100vw;
+        }
+
+        .fv__ui-toolbar .fv__ui-tab-nav {
+            margin-left: 266px;
+        }
+
+        .fv__ui-toolbar .fv__ui-tab-nav li {
+            color: white;
+        }
+
+        .fv__ui-toolbar .fv__ui-tab-nav li.active {
+            color: #636363;
+        }
+
+        .fv__ui-toolbar .fv__ui-gtab-item {
+            color: #fff;
+        }
+
+        .fv__ui-toolbar .fv__ui-gtab-item.active {
+            color: #636363;
+            background-color: #fff;
+        }
+
+        .fv__ui-mobile #pdf-ui {
+            top: 0;
+        }
+
+        .fv__ui-mobile .fv__ui-nav {
+            display: none;
+        }
+    </style>
+    <script src="../../../lib/adaptive.js"></script>
+</head>
+
+<body>
+    <div class="fv__ui-nav">
+        <a class="fv__ui-nav-logo" href="javascript:location.reload()">
+            <i class="fv__icon-logo"></i>
+        </a>
+    </div>
+    <div id="pdf-ui"></div>
+    <script src="https://webviewer-demo.foxitsoftware.cn/examples/license-key.js"></script>
+    <script src="../../../lib/preload-jr-worker.js"></script>
+    <script>
+        var readyWorker = preloadJrWorker({
+            workerPath: '../../../lib/',
+            enginePath: '../lib/jr-engine/gsdk',
+            fontPath: '../external/brotli',
+            licenseSN: licenseSN,
+            licenseKey: licenseKey
+        })
+    </script>
+    <script src="../../../lib/UIExtension.full.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
