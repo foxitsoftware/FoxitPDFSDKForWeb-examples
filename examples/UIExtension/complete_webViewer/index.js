@@ -1,3 +1,7 @@
+import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library';
+import '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.vw.css';
+import './index.css';
+
 var PDFUI = UIExtension.PDFUI;
 var Events = UIExtension.PDFViewCtrl.Events;
 var pdfui = new PDFUI({

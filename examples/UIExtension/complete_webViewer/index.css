@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+#pdf-ui {
+    top: 20px;
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+}
+
+.fv__ui-toolbar .fv__ui-tab-nav {
+    margin-left: 266px;
+}
+
+.fv__ui-toolbar .fv__ui-tab-nav li {
+    color: white;
+}
+
+.fv__ui-toolbar .fv__ui-tab-nav li.active {
+    color: #636363;
+}
+
+.fv__ui-toolbar .fv__ui-gtab-item {
+    color: #fff;
+}
+
+.fv__ui-toolbar .fv__ui-gtab-item.active {
+    color: #636363;
+    background-color: #fff;
+}
+
+.fv__ui-mobile #pdf-ui {
+    top: 0;
+}
+
+.fv__ui-mobile .fv__ui-nav {
+    display: none;
+}
