@@ -70,7 +70,7 @@ pdfui.addViewerEventListener(Events.finishConvert, function () {
 pdfui.openPDFByHttpRangeRequest(
     {
         range: {
-            url: '../../../docs/FoxitPDFSDKforWeb_DemoGuide.pdf',
+            url: '/assets/FoxitPDFSDKforWeb_DemoGuide.pdf',
         },
     },
     { fileName: 'FoxitPDFSDKforWeb_DemoGuide.pdf' }

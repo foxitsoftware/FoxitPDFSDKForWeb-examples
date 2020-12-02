@@ -58,10 +58,6 @@ module.exports = function(options) {
                     to: path.resolve(distPath, 'assets'),
                     force: true
                 }, {
-                    from: path.resolve(__dirname, '../docs'),
-                    to: path.resolve(distPath, 'docs'),
-                    force: true
-                }, {
                     from: path.resolve(__dirname, '../index.html'),
                     to: path.resolve(distPath, 'index.html'),
                     force: true
