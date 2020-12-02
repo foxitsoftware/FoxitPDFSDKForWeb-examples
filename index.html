@@ -1,1 +1,32 @@
-<meta http-equiv="refresh" content="0; url=./examples/UIExtension/complete_webViewer/index.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foxit PDF SDK For Web - examples</title>
+</head>
+<body>
+    <ul class="page-list" id="page-list">
+
+    </ul>
+    <script>
+        var pages = [{
+            title: 'Basic web viewer example',
+            url: '/examples/PDFViewCtrl/basic_webViewer/index.html'
+        },{
+            title: 'Complete web viewer example',
+            url: '/examples/UIExtension/complete_webViewer/index.html'
+        }];
+        var pageList = document.getElementById('page-list');
+        pages.forEach(function(page) {
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = page.url;
+            a.innerText = page.title;
+            li.title = page.title;
+            li.appendChild(a);
+            pageList.appendChild(li);
+        });
+    </script>
+</body>
+</html>

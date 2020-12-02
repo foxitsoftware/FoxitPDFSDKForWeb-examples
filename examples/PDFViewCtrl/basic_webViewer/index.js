@@ -1,6 +1,10 @@
+import * as PDFViewCtrl from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/PDFViewCtrl.full';
+import '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/PDFViewCtrl.css';
+
+
 var PDFViewer = PDFViewCtrl.PDFViewer;
 var pdfViewer = new PDFViewer({
-    libPath: '../../../lib',
+    libPath: '/lib',
     jr: {
         licenseSN: licenseSN,
         licenseKey: licenseKey,
@@ -31,7 +35,10 @@ var pdfViewer = new PDFViewer({
         })(),
     },
 });
-new PDFViewCtrl_EditGraphicsAddonModule.EditGraphicsAddon(pdfViewer).init();
+window.PDFViewCtrl = PDFViewCtrl;
+const { EditGraphicsAddon } = require('@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/PDFViewCtrl/addon/EditGraphicsAddonModule');
+
+new EditGraphicsAddon(pdfViewer).init();
 pdfViewer.init('#pdf-viewer');
 
 document.getElementById('file').onchange = function (e) {
@@ -65,32 +72,3 @@ document.getElementById('sub').onclick = function () {
     scale -= 0.25;
     pdfViewer.zoomTo(scale).catch(function () {});
 };
-
-function _inherits(subClass, superClass) {
-    if (typeof superClass !== 'function' && superClass !== null) {
-        throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-    }
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-        constructor: {
-            value: subClass,
-            enumerable: false,
-            writable: true,
-            configurable: true,
-        },
-    });
-    if (superClass)
-        Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : (subClass.__proto__ = superClass);
-}
-
-function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError('Cannot call a class as a function');
-    }
-}
-
-function _possibleConstructorReturn(self, call) {
-    if (!self) {
-        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
-    return call && (typeof call === 'object' || typeof call === 'function') ? call : self;
-}

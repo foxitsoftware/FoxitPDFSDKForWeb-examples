@@ -61,9 +61,20 @@ module.exports = function(options) {
                     from: path.resolve(__dirname, '../docs'),
                     to: path.resolve(distPath, 'docs'),
                     force: true
+                }, {
+                    from: path.resolve(__dirname, '../index.html'),
+                    to: path.resolve(distPath, 'index.html'),
+                    force: true
                 }]
             })
         ]),
+        resolve: {
+            alias: {
+                'UIExtension': path.resolve(__dirname, '../node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.full.js'),
+                'PDFViewCtrl': path.resolve(__dirname, '../node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/PDFViewCtrl.js'),
+            }
+        },
+        externals: ['UIExtension', 'PDFViewCtrl'],
         output: {
             filename: '[name]/index.js',
             path: distPath,
