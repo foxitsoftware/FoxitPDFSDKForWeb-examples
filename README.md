@@ -1,4 +1,4 @@
-# Quickly access examples and documentation
+# Foxit PDF SDK For Web examples
 
 1. Install all dependencies defined in package.json in the SDK package:
 
@@ -6,10 +6,8 @@
     npm i
     ```
 
-2. Run `npm start` to start a simple http server
+2. Run `npm start` to start dev server (including webpack, snapshot server).
 
-Now you can visit the following URL with your browser
+Now you can visit <http://127.0.0.1:8080/> in your browser
 
-| URL | Description |
-|:--|:--|
-| <http://127.0.0.1:8080/examples/> | Example list|
+These examples can be edited on [CodeSandbox](https://codesandbox.io/s/github/foxitsoftware/FoxitPDFSDKForWeb-examples).
