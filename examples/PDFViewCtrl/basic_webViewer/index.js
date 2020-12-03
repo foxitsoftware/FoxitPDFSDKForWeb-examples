@@ -1,4 +1,4 @@
-import * as PDFViewCtrl from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/PDFViewCtrl.full';
+import * as PDFViewCtrl from 'PDFViewCtrl';
 import '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/PDFViewCtrl.css';
 
 
