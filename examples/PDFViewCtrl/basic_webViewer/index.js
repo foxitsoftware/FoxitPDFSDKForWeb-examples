@@ -8,6 +8,7 @@ var pdfViewer = new PDFViewer({
     jr: {
         licenseSN: licenseSN,
         licenseKey: licenseKey,
+        fontPath: 'https://webpdf.foxitsoftware.com/webfonts/',
         tileSize: 300,
     },
     customs: {
