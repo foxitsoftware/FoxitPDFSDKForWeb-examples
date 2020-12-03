@@ -1,5 +1,5 @@
 {
-    "name": "foxit-pdf-sdk-for-web",
+    "name": "foxit-pdf-sdk-for-web-examples",
     "version": "7.5.0",
     "description": "Foxit pdf sdk for web.",
     "author": "Foxit Software Inc.",
@@ -7,8 +7,9 @@
     "types": "./lib/UIExtension.d.ts",
     "scripts": {
         "start": "concurrently --kill-others \"npm run start:webpack\" \"npm run start:snapshot-server\"",
-        "start:webpack": "webpack serve --config ./build/webpack.config.dev.js",
-        "start:snapshot-server": "node ./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/server/snapshot/src/index -p 3002"
+        "start:webpack": "webpack serve --config ./build/webpack.config.js --mode development",
+        "start:snapshot-server": "node ./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/server/snapshot/src/index -p 3002",
+        "build": "webpack --config ./build/webpack.config.js --mode production"
     },
     "license": "ISC",
     "devDependencies": {

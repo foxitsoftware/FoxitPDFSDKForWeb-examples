@@ -1,31 +1,37 @@
+const fs = require('fs-extra');
 const path = require('path');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const exampleDir = path.resolve(__dirname, '../examples')
+
+const entries = [];
+
+fs.readdirSync(exampleDir).forEach(dep1dir => {
+    const dep1 = path.resolve(exampleDir, dep1dir);
+    fs.readdirSync(dep1).forEach(dep2dir => {
+        entries.push({
+            path: 'examples/' + dep1dir + '/' + dep2dir,
+            js: path.resolve(exampleDir, dep1dir, dep2dir, 'index.js'),
+            template: path.resolve(exampleDir, dep1dir, dep2dir, 'index.html'),
+        })
+    })
+})
 
 const distPath = path.resolve(__dirname, '../dist');
 const libraryModulePath = path.resolve('node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library');
 const libPath = path.resolve(libraryModulePath, 'lib');
 
-/**
- * 
- * @param {object} options 
- * @param {object[]} options.entries 
- * @param {string} options.entries[].path 
- * @param {string} options.entries[].js 
- * @param {string} options.entries[].template
- * @param {Object} options.
- * @param {string} options.mode
- * @param {Object[]} options.plugins
- */
-module.exports = function(options) {
-    const mode = options.mode || 'development';
+module.exports = function(env, argv) {
+    const mode = argv.mode;
     return {
         mode: mode,
-        entry: options.entries.reduce((entries, entry) => {
+        entry: entries.reduce((entries, entry) => {
             entries[entry.path] = entry.js;
             return entries;
         }, {}),
-        devtool: mode === 'development' ? 'inline-source-map': 'none',
+        devtool: mode === 'development' ? 'inline-source-map': false,
+        devServer: mode === 'development' ? require('./webpack-dev-server.config') : undefined,
         module: {
             rules: [{
                 test: /\.(js|es)$/,
@@ -36,8 +42,8 @@ module.exports = function(options) {
                 use: ['style-loader', 'css-loader']
             }]
         },
-        plugins: (options.plugins || []).concat(
-            options.entries.map((entry) => {
+        plugins: [].concat(
+            entries.map((entry) => {
                 return new HtmlWebpackPlugin({
                     template: entry.template,
                     filename: path.resolve(distPath, entry.path, 'index.html'),
@@ -64,17 +70,11 @@ module.exports = function(options) {
                 }]
             })
         ]),
-        resolve: {
-            alias: {
-                'UIExtension': path.resolve(__dirname, '../node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.full.js'),
-                'PDFViewCtrl': path.resolve(__dirname, '../node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/PDFViewCtrl.js'),
-            }
-        },
         externals: ['UIExtension', 'PDFViewCtrl'],
         output: {
             filename: '[name]/index.js',
             path: distPath,
             globalObject: 'window'
         }
-    };
-}
+    }
+};
