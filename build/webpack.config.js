@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
+const webpack = require('webpack');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -80,7 +81,11 @@ module.exports = function(env, argv) {
             new MiniCssExtractPlugin({
                 filename: '[name].css'
             })
-        ]),
+        ]).concat(
+            mode === 'development'? [
+                new webpack.HotModuleReplacementPlugin()
+            ] : []
+        ),
         externals: ['UIExtension', 'PDFViewCtrl'],
         output: {
             filename: '[name].js',
