@@ -2,8 +2,6 @@
     "template": "node",
     "port": 8080,
     "container": {
-        "port": 8080,
-        "startScript": "start",
-        "node": "10.16.0"
+        "port": 8080
     }
 }
