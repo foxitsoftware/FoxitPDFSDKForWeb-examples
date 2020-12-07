@@ -15,8 +15,8 @@ var pdfui = new PDFUI({
     appearance: UIExtension.appearances.adaptive,
     fragments: [],
     addons: UIExtension.PDFViewCtrl.DeviceInfo.isMobile
-        ? '../../../lib/uix-addons/allInOne.mobile.js'
-        : '../../../lib/uix-addons/allInOne.js',
+        ? '/lib/uix-addons/allInOne.mobile.js'
+        : '/lib/uix-addons/allInOne.js',
 });
 
 pdfui.addUIEventListener('fullscreenchange', function (isFullscreen) {
@@ -113,7 +113,7 @@ var requestData = function (type, url, responseType, body) {
 };
 
 pdfui.setVerifyHandler(function (signatureField, plainBuffer, signedData) {
-    return requestData('post', 'http://10.103.4.154:7777/verify', 'text', {
+    return requestData('post', location.protocol + '://webviewer-demo.foxitsoftware.com/signature/verify', 'text', {
         filter: signatureField.getFilter(),
         subfilter: signatureField.getSubfilter(),
         signer: signatureField.getSigner(),
@@ -131,7 +131,7 @@ pdfui.registerSignHandler({
     signer: 'web sdk',
     showTime: true,
     sign: function (setting, buffer) {
-        return requestData('post', 'http://10.103.4.154:7777/digest_and_sign', 'arraybuffer', {
+        return requestData('post', location.protocol + '://webviewer-demo.foxitsoftware.com/signature/digest_and_sign', 'arraybuffer', {
             plain: new Blob([buffer]),
         });
     },
