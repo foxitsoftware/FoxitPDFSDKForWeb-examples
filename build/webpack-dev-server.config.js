@@ -1,9 +1,8 @@
 const path = require('path');
 module.exports = {
     contentBase: path.resolve(__dirname, '../dist'),
-    open: true,
-    openPage: 'examples/UIExtension/complete_webViewer/index.html',
-    port: 9999,
+    public: '0.0.0.0:0',
+    port: 8080,
     inline: true,
     disableHostCheck: true,
     clientLogLevel: 'error',
