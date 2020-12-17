@@ -136,3 +136,4 @@ pdfui.registerSignHandler({
         });
     },
 });
+window.pdfui = pdfui;
