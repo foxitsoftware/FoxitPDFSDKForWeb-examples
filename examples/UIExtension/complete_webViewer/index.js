@@ -113,7 +113,7 @@ var requestData = function (type, url, responseType, body) {
 };
 
 pdfui.setVerifyHandler(function (signatureField, plainBuffer, signedData) {
-    return requestData('post', location.protocol + '://webviewer-demo.foxitsoftware.com/signature/verify', 'text', {
+    return requestData('post', location.protocol + '//webviewer-demo.foxitsoftware.com/signature/verify', 'text', {
         filter: signatureField.getFilter(),
         subfilter: signatureField.getSubfilter(),
         signer: signatureField.getSigner(),
@@ -131,7 +131,7 @@ pdfui.registerSignHandler({
     signer: 'web sdk',
     showTime: true,
     sign: function (setting, buffer) {
-        return requestData('post', location.protocol + '://webviewer-demo.foxitsoftware.com/signature/digest_and_sign', 'arraybuffer', {
+        return requestData('post', location.protocol + '//webviewer-demo.foxitsoftware.com/signature/digest_and_sign', 'arraybuffer', {
             plain: new Blob([buffer]),
         });
     },
