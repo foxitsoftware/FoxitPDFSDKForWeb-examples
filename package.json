@@ -48,10 +48,11 @@
     },
     "serve": {
         "port": 8080,
-        "public": "/",
         "proxy": {
-            "target": "http://127.0.0.1:3002",
-            "changeOrigin": true
+            "/snapshot": {
+                "target": "http://127.0.0.1:3002",
+                "changeOrigin": true
+            }
         }
     },
     "dependencies": {
