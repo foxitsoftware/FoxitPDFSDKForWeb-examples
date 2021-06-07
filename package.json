@@ -56,6 +56,6 @@
         }
     },
     "dependencies": {
-        "@foxitsoftware/foxit-pdf-sdk-for-web-library": "^7.6.0"
+        "@foxitsoftware/foxit-pdf-sdk-for-web-library": "^8.0.0"
     }
 }
