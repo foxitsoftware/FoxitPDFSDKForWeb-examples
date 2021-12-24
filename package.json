@@ -6,6 +6,7 @@
     "main": "./lib/UIExtension.full.js",
     "types": "./lib/UIExtension.d.ts",
     "scripts": {
+        "postinstall": "npm i -s @foxitsoftware/foxit-pdf-sdk-for-web-library",
         "move-sdk-assets": "cp-cli ./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib ./dist/lib",
         "start": "concurrently --kill-others \"npm run start:webpack\" \"npm run start:snapshot-server\"",
         "start:webpack": "webpack serve --config ./build/webpack.config.js --mode development",
@@ -56,6 +57,5 @@
         }
     },
     "dependencies": {
-        "@foxitsoftware/foxit-pdf-sdk-for-web-library": "^8.1.0"
     }
 }
