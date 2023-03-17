@@ -8,7 +8,7 @@
     "scripts": {
         "postinstall": "npm i --ignore-scripts -S @foxitsoftware/foxit-pdf-sdk-for-web-library",
         "move-sdk-assets": "cp-cli ./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib ./dist/lib",
-        "start": "concurrently --kill-others \"npm run start:webpack\" \"npm run start:snapshot-server\"",
+        "start": "npx cross-env WDS_SOCKET_PORT=443 zx ./scripts/start.mjs",
         "start:webpack": "webpack serve --config ./build/webpack.config.js --mode development",
         "start:snapshot-server": "node ./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/server/snapshot/src/index -p 3003",
         "build": "npm run move-sdk-assets && webpack --config ./build/webpack.config.js --mode production"
@@ -45,7 +45,8 @@
         "style-loader": "^2.0.0",
         "webpack": "^5.9.0",
         "webpack-cli": "^4.3.0",
-        "webpack-dev-server": "^3.11.0"
+        "webpack-dev-server": "3.11.0",
+        "zx": "^7.2.1"
     },
     "serve": {
         "port": 8080,
@@ -57,5 +58,6 @@
         }
     },
     "dependencies": {
+        "@foxitsoftware/foxit-pdf-sdk-for-web-library": "^9.0.0"
     }
 }
