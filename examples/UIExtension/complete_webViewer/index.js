@@ -60,13 +60,6 @@ pdfui.addViewerEventListener(Events.openFileFailed, function (data) {
     });
 });
 
-pdfui.addViewerEventListener(Events.startConvert, startLoading);
-pdfui.addViewerEventListener(Events.finishConvert, function () {
-    loadingComponentPromise.then(function (component) {
-        component.close();
-    });
-});
-
 pdfui.openPDFByHttpRangeRequest(
     {
         range: {
